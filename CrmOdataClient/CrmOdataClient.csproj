@@ -6,17 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="metadata.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.OData.Client" Version="7.7.0" />
     <PackageReference Include="Microsoft.OData.Core" Version="7.7.0" />
     <PackageReference Include="Microsoft.OData.Edm" Version="7.7.0" />
     <PackageReference Include="Microsoft.Spatial" Version="7.7.0" />
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="metadata.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
