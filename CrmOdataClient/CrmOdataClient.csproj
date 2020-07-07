@@ -6,15 +6,31 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="metadata.xml" />
+    <None Remove="Connected Services\OData Service\OData ServiceCsdl.xml" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Connected Services\OData Service\OData ServiceCsdl.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.5.0" />
     <PackageReference Include="Microsoft.OData.Client" Version="7.7.0" />
     <PackageReference Include="Microsoft.OData.Core" Version="7.7.0" />
     <PackageReference Include="Microsoft.OData.Edm" Version="7.7.0" />
     <PackageReference Include="Microsoft.Spatial" Version="7.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="metadata.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
